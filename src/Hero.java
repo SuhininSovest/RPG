@@ -29,6 +29,11 @@ public class Hero extends Character{
         }
     }
 
+    @Override
+    public void lvlUP() {
+
+    }
+
     public void stat() {
         System.out.println("Hero{" +
                 "hp=" + getHp() +

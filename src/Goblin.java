@@ -19,6 +19,11 @@ public class Goblin extends Character{
 
     }
 
+    @Override
+    public void lvlUP() {
+
+    }
+
     public void stat() {
         System.out.println("Monster{" +
                 "hp=" + getHp() +
