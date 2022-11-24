@@ -23,16 +23,22 @@ public class Battle {
     }
     public void figth(Character hero, Character monster) {  // Нужно доделать логику боев в классах (методы attack)
         do {
-            if (isHero == true) {
+            if (isHero == true && hero.getHp() > 0) {
                 count++;
-                hero.attack();
+                hero.attack(monster);
                 isHero = false;
-            } else {
+            } else if (isHero == false && monster.getHp() > 0) {
                 count++;
-                monster.attack();
+                monster.attack(hero);
                 isHero = true;
+            } else {
+                if(hero.getHp() <= 0) {
+                    System.out.println("The hero is dead");
+                } else {
+                    System.out.println("The " + monster.getName() + " is dead");
+                }
+                isEnd = true;
             }
-        } while(count != 8);
-        //} while(isEnd != true);
+        } while(isEnd != true);
     }
 }

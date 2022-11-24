@@ -69,7 +69,7 @@ abstract class Character {
     private int gold;
     private String name;
 
-    public abstract void attack();
+    public abstract void attack(Character monster);
     public abstract void isDexterity();
 
     public abstract void lvlUP();

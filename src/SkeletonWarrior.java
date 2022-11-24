@@ -1,7 +1,9 @@
 public class SkeletonWarrior extends Character{
     @Override
-    public void attack() {
-
+    public void attack(Character hero) {
+        System.out.println("Skeleton attack");
+        hero.setHp(hero.getHp() - getPower());
+        System.out.println(hero.getHp());
     }
 
     @Override
