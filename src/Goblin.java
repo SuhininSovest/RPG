@@ -1,4 +1,5 @@
 public class Goblin extends Character{
+    public Character hero;
     public Goblin(int hp, int power, int dexterity,
                   double experience, int gold, String name) {
         this.setHp(hp);
@@ -8,10 +9,13 @@ public class Goblin extends Character{
         this.setGold(gold);
         this.setName(name);
     }
+    public Goblin() {
+        super();
+    }
 
     @Override
     public void attack() {
-
+        System.out.println("Goblin attack");
     }
 
     @Override
@@ -23,7 +27,7 @@ public class Goblin extends Character{
     public void lvlUP() {
 
     }
-
+    @Override
     public void stat() {
         System.out.println("Monster{" +
                 "hp=" + getHp() +

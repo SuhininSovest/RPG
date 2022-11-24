@@ -1,5 +1,5 @@
 public class Hero extends Character{
-    public Goblin monster;
+    public Character monster;
     public Hero(int hp, int power, int dexterity,
                 double experience, int gold, String name) {
         this.setHp(hp);
@@ -12,14 +12,7 @@ public class Hero extends Character{
 
     @Override
     public void attack() {
-        monster.setHp(monster.getHp() - getPower());
-        if (monster.getHp() <= 0) {
-            setGold(getGold() + monster.getGold());
-            System.out.println("Hero won!");
-            System.out.println("After searching the body of the defeated " + monster.getName() + ", you found gold." + getGold());
-        } else {
-            System.out.println("The hero struck an insidious blow to the balls.");
-        }
+        System.out.println("Hero attack");
     }
 
     @Override
@@ -33,7 +26,7 @@ public class Hero extends Character{
     public void lvlUP() {
 
     }
-
+    @Override
     public void stat() {
         System.out.println("Hero{" +
                 "hp=" + getHp() +
@@ -44,5 +37,4 @@ public class Hero extends Character{
                 ", name='" + getName() + '\'' +
                 '}');
     }
-
 }

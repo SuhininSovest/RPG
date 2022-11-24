@@ -74,4 +74,6 @@ abstract class Character {
 
     public abstract void lvlUP();
 
+    public abstract void stat();
+
 }
