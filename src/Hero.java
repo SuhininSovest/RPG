@@ -14,7 +14,7 @@ public class Hero extends Character{
     public void attack(Character monster) {
         System.out.println("Hero attack");
         monster.setHp(monster.getHp() - getPower());
-        System.out.println(monster.getHp());
+        System.out.println("Health " + monster.getName() + ": " + monster.getHp());
     }
 
     @Override

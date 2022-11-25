@@ -16,7 +16,7 @@ public class Goblin extends Character{
     public void attack(Character hero) {
         System.out.println("Goblin attack");
         hero.setHp(hero.getHp() - getPower());
-        System.out.println(hero.getHp());
+        System.out.println("Health " + hero.getName() + ": " + hero.getHp());
     }
 
     @Override
