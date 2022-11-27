@@ -25,8 +25,17 @@ public class Goblin extends Character{
     }
 
     @Override
-    public void lvlUP() {
-
+    public void lvlUP(Character character) {
+        setExperience(getExperience() + character.getExperience());
+        if (getExperience() == 10 ) {
+            setHp(getHp() + 15);
+            setExperience(0);
+            setDexterity(getDexterity() + 5);
+            setPower(getPower() + 2);
+            stat();
+        } else {
+            System.out.println("");
+        }
     }
     @Override
     public void stat() {

@@ -1,4 +1,5 @@
 public class Hero extends Character{
+    int count = 1;
 
     public Hero(int hp, int power, int dexterity,
                 double experience, int gold, String name) {
@@ -25,8 +26,23 @@ public class Hero extends Character{
     }
 
     @Override
-    public void lvlUP() {
-
+    public void lvlUP(Character monster) {
+        setExperience(getExperience() + monster.getExperience());
+        if (getExperience() == 10 * (count * 2)) {
+            count++;
+            System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+            System.out.println("LVL UP");
+            System.out.println("You have become stronger and faster!");
+            System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+            setHp(getHp() + 25);
+            setExperience(0);
+            setName("Artem lvl " + count);
+            setDexterity(getDexterity() + 5);
+            setPower(getPower() + 5);
+            stat();
+        } else {
+            System.out.println("");
+        }
     }
     @Override
     public void stat() {

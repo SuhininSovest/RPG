@@ -72,7 +72,7 @@ abstract class Character {
     public abstract void attack(Character monster);
     public abstract void isDexterity();
 
-    public abstract void lvlUP();
+    public abstract void lvlUP(Character monster);
 
     public abstract void stat();
 
